@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+ {% block content %}
+<section class="section-content padding-y bg">
+  <div class="container">
+    <!-- ============================ COMPONENT 1 ================================= -->
+
+    <br />
+
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <center>
+            <h1 class="text-muted">SOBRE NOSOTROS</h1>
+          </center>
+        </div>
+
+        <article class="box mb-3">
+          <div class="icontext w-100">
+            <div class="text text-danger">
+              <span class="date text-muted float-md-right">2021</span>
+              <h2 class="mb-1">Universidad Mariano Gálvez de Guatemala</h2>
+            </div>
+          </div>
+          <div class="icontext w-100">
+            <div class="text text-justify">
+              <p>
+                Esta es una tienda online, con todos los productos en venta <i>simulada!, </i>
+                <strong>¿Por qué?</strong>, porque este es un proyecto solicitado en el curso
+                <i>Desarrollo web</i>,| <strong>pero</strong> |, este es un proyecto <strong>100%</strong> funcional
+                con paypal como método de pago, que podríamos implementarlo en el lugar que usted desee!
+              </p>
+              <a href="{% url 'contact_us' %}">contáctenos para obtener más detalles!</a>
+            </div>
+          </div>
+          <!-- icontext.// -->
+          <div class="mt-3">
+            <h2>Desarrolladores</h2>
+            <a href="https://github.com/Rychy248" target="_blank">
+              <div class="card text-center btn btn-outline-info">
+                <p>Antonio Jorge Ricardo Hernández Gonzales</p>
+                <p><strong>1090-18-4098</strong></p>
+              </div>
+            </a>
+            <a href="https://github.com/MyLittleViruz" target="_blank">
+              <div class="card text-center btn btn-outline-warning">
+                <p>William Fernando Castillo</p>
+                <p><strong>1090-18-4098</strong></p>
+              </div>
+            </a>
+            <a href="https://m.facebook.com/profile.php?id=100009577098633" target="_blank">
+              <div class="card text-center btn btn-outline-danger">
+                  <p>Yohana Nohemí Pérez Urizar</p>
+                  <p><strong>1090-18-4098</strong></p>
+              </div>
+            </a>
+          </div>
+        </article>
+      </div>
+      <!-- col.// -->
+    </div>
+    <!-- row.// -->
+  </div>
+  <!-- container .//  -->
+</section>
+<!-- ========================= SECTION CONTENT END// ========================= -->
+{% endblock %}
