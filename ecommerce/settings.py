@@ -31,7 +31,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', cast=bool)
 
-ALLOWED_HOSTS = ['*'] #se esta permitiendo todos los hosts
+ALLOWED_HOSTS = ['pyshopweb.herokuapp.com','127.0.0.1'] #se esta permitiendo todos los hosts
 
 
 # Application definition
