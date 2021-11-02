@@ -26,6 +26,9 @@
 				</div>
 			</span>
 		</div>
+		<div class="col-md-8 text-md-center footHour">
+			<p>Hora Actual <strong id="HoraActual" class="h4"></strong></p>
+		</div>
 	</div>
 	<!--added by me  -->
 	<div class="container">
@@ -56,8 +59,36 @@
 			$('.mainImage img').attr('src',$(this).attr('href'));
 		})
 	})
-
 </script>
-
+<!-- #hora -->
+	<script>
+		showTime();
+		function showTime(){
+			myDate = new Date();
+			hours = myDate.getHours();
+			minutes = myDate.getMinutes();
+			seconds = myDate.getSeconds();
+			am_or_pm = ""
+		
+			if (hours >= 12){
+				 hours = hours - 12;
+				 am_or_pm = "pm"
+			}else{
+				am_or_pm = "am"
+			}
+			if (hours < 10){
+				hours = "0" + hours;
+			}
+			if (minutes < 10){
+				minutes = "0" + minutes;
+			}
+			if (seconds < 10){
+				seconds = "0" + seconds;
+			}
+			$("#HoraActual").text(hours+ ":" +minutes+ ":" +seconds+am_or_pm);
+			setTimeout("showTime()", 1000);
+		
+		}
+	</script>
 </body>
 </html>
