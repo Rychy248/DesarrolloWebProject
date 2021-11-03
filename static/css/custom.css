@@ -53,3 +53,8 @@ ul.thumb li img{
     border: 1px solid rgb(187, 20, 20);
     border-radius:10%;
 }
+
+.footHour{
+    font-family: Arial,sans-serif;
+    color: #FF214F;
+}
