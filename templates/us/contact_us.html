@@ -8,50 +8,14 @@
         <div class="card mx-auto" style="max-width:520px; margin-top:40px;">
           <article class="card-body">
               {% include 'includes/alerts.html' %}
-            <header class="mb-4"><h4 class="card-title">Registro de Usuario</h4></header>
-            <form action="{% url 'register' %}" method="POST">
-                {% csrf_token %}
-                <!-- {{ form.as_p }} -->
-                    <div class="form-row">
-                        <div class="col form-group">
-                            <label>Nombre</label>
-                            {{ form.first_name }}
-                        </div> <!-- form-group end.// -->
-                        <div class="col form-group">
-                            <label>Apellido</label>
-                            {{ form.last_name}}
-                        </div> <!-- form-group end.// -->
-                    </div> <!-- form-row end.// -->
-                    <div class="form-row">
-                        <div class="col form-group">
-                            <label>Número telefónico</label>
-                            {{ form.phone_number }}
-                        </div> <!-- form-group end.// -->
-                        <div class="col form-group">
-                            <label>email</label>
-                            {{ form.email }}
-                        </div> <!-- form-group end.// -->
-                    </div> <!-- form-row end.// -->
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label>Crear password</label>
-                            {{ form.password }}
-                        </div> <!-- form-group end.// -->
-                        <div class="form-group col-md-6">
-                            <label>Repetir password</label>
-                            {{ form.confirm_password }}
-                        </div> <!-- form-group end.// -->
-                    </div>
-                    <div class="form-group">
-                        <button type="submit" class="btn btn-primary btn-block"> Registrar  </button>
-                    </div> <!-- form-group// -->
-                    
-                    {{ form.email.errors  }}
-                    {{ form.non_field_errors }}
-                </form>
-            </article><!-- card-body.// -->
+            <header class="mb-4"><h4 class="card-title">Ubicanos físicamente, si lo deseas!</h4></header>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d240.82198942519625!2d-91.14921006594973!3d15.03971601836632!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x858bffe8f39bd1c3%3A0x5e18575bbe1d0fce!2sCentro%20de%20Servicio%20Santa%20Elena!5e0!3m2!1ses!2sgt!4v1636087046206!5m2!1ses!2sgt" 
+            width="400" height="auto" style="border:2;" 
+            allowfullscreen="" loading="lazy">
+        </iframe>
+        </article><!-- card-body.// -->
         </div> <!-- card .// -->
-        <p class="text-center mt-4">¿Quienes somos? <a href="{% url 'login' %}">Log In</a></p>
+        
         <br><br>
     <!-- ============================ COMPONENT REGISTER  END.// ================================= -->
 

@@ -41,7 +41,7 @@ def register(request):
             #### crear un perifl del usuario
             profile = UserProfile()
             profile.user_id = user.id
-            profile.profile_picture = 'default/default-user.png'
+            profile.picture = 'default/default-user.png'
             #profile.picture = 'default/default-user.png'
             profile.save()
             
