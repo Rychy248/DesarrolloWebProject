@@ -17,10 +17,201 @@
         </div> <!-- card .// -->
         
         <br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
     <!-- ============================ COMPONENT REGISTER  END.// ================================= -->
 
 
     </section>
+
+
+
+
+
+
+
+    
+  <link rel="stylesheet" href="http://lead.pharmafranchises.in/login/style.css">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
+
+<!-- partial:index.partial.html -->
+<div id="dPrincipal" class="container-fluid">
+  <div class="row">
+    <div class="col-12">
+  <h2><span><img src="http://pngimg.com/uploads/whatsapp/whatsapp_PNG10.png"></span> ENVIA TU MENSAJE POR WHATSAPP</h2>
+      </div>
+  </div>
+<div id="inputs" class="row col-11 col-sm-6">
+  <div class="col-12">
+  <label for="mensaje">Escribe tu mensaje</label>
+    <!--
+  <input type="text"  name="send"  placeholder="ingrese el mensaje..." id="mensaje" />
+--> <textarea id="mensaje" rows="6" cols="50" placeholder="Escribenos...">
+</textarea>
+    </div>
+ 
+  <div class="col-12">
+  <label for="number">Numero </label>
+  <input type="number"  name="number" id="number" placeholder="Ingresa Tu Numero"/>
+ </div>
+  <br>
+  <div class="col-12">
+    <div class="col-sm-6" style="float:left">
+  <button  id="send_message" class="button button1" style="width:100%">ENVIAR </button>
+    </div>
+    <div class="col-sm-6" style="float:left">
+  <button class="button button3" id="ubicacion" style="width:100%">Reiniciar</button>
+       </div>
+    </div>
+  </div>
+
+  <input type="file" accept="image/*" capture="camera">
+
+</div>
+  <div id="creditos">Richy@</div>
+<br><br>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js'></script><script  src="./script.js"></script>
+
+
+
+<style>
+    
+#dPrincipal{
+  width: 35%;
+  background-color: #53bca6;
+  margin: 0 auto;
+  text-align: center;
+  padding:0px;
+  padding-bottom: 20px;
+  border-radius: 10px;
+  
+}
+
+#inputs{
+background-color: white;
+  border-radius: 10px;
+  margin: 0 auto;
+  padding: 10px;
+  text-align: center;
+  padding-bottom: 15px;
+
+}
+
+#inputs div{
+  text-align: left;
+  padding: 15px;
+}
+
+#creditos{
+ width: 79%;
+  margin: 0 auto;
+  padding: 10px;
+  text-align: right;
+  color: white;
+}
+
+input{
+  margin-top: 4px;
+  padding: 10px;
+  width: 100%;
+  border-radius: 8px;
+  font-size: 16px;
+  border: 1px solid lightgrey;
+  box-sizing: border-box;
+}
+
+#mensaje{
+  margin-top: 4px;
+  padding: 10px;
+  width: 100%;
+  border-radius: 8px;
+  font-size: 16px;
+  border: 1px solid lightgrey;
+  box-sizing: border-box;
+  resize: none;
+}
+
+/* img{
+  width: 30px;
+  margin-right: 10px;
+} */
+
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  display: inline-block;
+  font-size: 14px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: green; 
+  color: white; 
+  border: 2px solid #4CAF50;
+}
+
+.button1:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.button3 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid lightblue;
+}
+
+.button3:hover {
+  background-color: lightblue;
+  color: white;
+}
+</style>
+
+
+
+<script>
+    document.querySelector('#send_message').addEventListener('click',function(){
+
+var message = document.querySelector('#mensaje').value;
+var number = document.querySelector('#number').value;
+
+var url = "https://api.whatsapp.com/send?text="+encodeURIComponent(message)+"&phone="+encodeURIComponent("+502" + number)
+
+window.open(url);
+
+});
+
+document.querySelector('#ubicacion').addEventListener('click',function(){
+let message = document.querySelector('#mensaje');
+let hora = new Date().getHours();
+let saludo = ()=>{if(hora >= 5 && hora < 12){ return "Buenos días!"} else if(hora >= 12 && hora < 21){ return "Buenas tardes!"} else { return "buenas noches!"}}
+
+message.innerText = ` Bienvenido to Casca Remedies Pvt . Ltd. How can I help You ?
+`;
+});
+</script>
+
     <!-- ========================= SECTION CONTENT END// ========================= -->
 
 {% endblock %}
