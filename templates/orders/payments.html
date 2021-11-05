@@ -72,8 +72,8 @@
                         </td>
                         <td> 
                             <div class="price-wrap"> 
-                                <var class="price">${{ cart_item.sub_total }}</var> 
-                                <small class="text-muted"> ${{ cart_item.product.price }} cada uno </small> 
+                                <var class="price">Q{{ cart_item.sub_total }}</var> 
+                                <small class="text-muted"> Q{{ cart_item.product.price }} cada uno </small> 
                             </div> <!-- price-wrap .// -->
                         </td>
                     </tr>
@@ -89,20 +89,20 @@
             <div class="card-body">
                 <dl class="dlist-align">
                   <dt>Total price:</dt>
-                  <dd class="text-right">${{ total_price }}</dd>
+                  <dd class="text-right">Q{{ total_price }}</dd>
                 </dl>
                 <dl class="dlist-align">
                   <dt>Impuesto:</dt>
-                  <dd class="text-right"> ${{ impuesto }}</dd>
+                  <dd class="text-right"> Q{{ impuesto }}</dd>
                 </dl>
                 <hr></hr>
                 <dl class="dlist-align">
                   <dt>Total:</dt>
-                  <dd class="text-right text-dark b"><strong>${{ grand_total }}</strong></dd>
+                  <dd class="text-right text-dark b"><strong>Q{{ grand_total }}</strong></dd>
                 </dl>
                 <hr></hr>
                 <p class="text-center mb-3">
-                    <img src="{% static 'images/misc/payments.png' %}" height="26">
+                    <img src="{% static 'images/misc/paym   ents.png' %}" height="26">
                 </p>
                 <div id="paypal-button-container"></div>
                 

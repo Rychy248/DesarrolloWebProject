@@ -27,7 +27,10 @@ class Product(models.Model):
             avg = float(reviews['average'])
 
         return round(avg,2)
-    
+    def price_offer(self):
+        price = self.price + (self.price * 0.05)
+        return price
+        
     def count_review(self):
         reviews = ReviewRating.objects.filter(product=self, status=True).aggregate(count=Count('id'))
         count_review = 0
